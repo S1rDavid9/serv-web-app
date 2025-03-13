@@ -116,3 +116,18 @@
     background-color: #ddd;
     cursor: not-allowed;
 }
+
+.stars {
+    display: flex;
+    gap: 4px;
+    margin: 5px 0;
+}
+
+.star {
+    color: #FFD700; 
+    font-size: 1.2rem;
+}
+
+.star.filled {
+    color: #FFD700; 
+}

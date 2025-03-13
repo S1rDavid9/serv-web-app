@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import Testimonials from './components/Testimonials';
+import CTASection from './components/CTASection';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Services />
       <About />
       <Testimonials />
+      <CTASection />
     </div>
   );
 }

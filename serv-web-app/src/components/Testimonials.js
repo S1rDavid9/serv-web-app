@@ -2,32 +2,38 @@ import React, { useState } from 'react';
 import './Testimonials.css';
 import { motion } from 'framer-motion';
 import ReviewForm from './ReviewForm';
+import { FaStar } from 'react-icons/fa';
 
 const initialTestimonialsData = [
     {
         name: "Jane Umutoni",
         review: "Serv connected me with a reliable plumber in no time. Fantastic service!",
-        image: "/assets/portrait.jpg"
+        image: "/assets/portrait.jpg",
+        rating: 5
     },
     {
         name: "Josh Benard",
         review: "I was amazed at how easy it was to find an electrician through Serv. Highly recommend!",
-        image: "/assets/portrait1.jpg"
+        image: "/assets/portrait1.jpg",
+        rating: 4
     },
     {
         name: "Peter Niyonshuti",
         review: "Quick, reliable, and trustworthy. Serv made my home repairs stress-free!",
-        image: "/assets/portrait2.jpg"
+        image: "/assets/portrait2.jpg",
+        rating: 5
     },
     {
         name: "Esther Mutesi",
         review: "Finding a painter was a breeze with Serv. Excellent experience!",
-        image: "/assets/portrait5.jpg"
+        image: "/assets/portrait5.jpg",
+        rating: 5
     },
     {
         name: "Emmanuella Mwangi",
         review: "Highly professional and very fast. Would definitely use Serv again!",
-        image: "/assets/portrait4.jpg"
+        image: "/assets/portrait4.jpg",
+        rating: 5
     }
 ];
 
@@ -53,6 +59,17 @@ const Testimonials = () => {
         setShowForm(false);
     };
 
+    const renderStars = (rating) => (
+        <div className="stars">
+            {[...Array(5)].map((_, i) => (
+                <FaStar 
+                    key={i} 
+                    className={`star ${i < Number(rating) ? "filled" : ""}`} 
+                />
+            ))}
+        </div>
+    );
+
     return (
         <section className="testimonials-section">
             <h2>What Our Users Say</h2>
@@ -68,6 +85,7 @@ const Testimonials = () => {
                         viewport={{ once: true }}
                     >
                         <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
+                        {renderStars(testimonial.rating)}
                         <p className="testimonial-text">"{testimonial.review}"</p>
                         <h4 className="testimonial-name">- {testimonial.name}</h4>
                     </motion.div>

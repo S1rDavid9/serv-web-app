@@ -45,7 +45,7 @@
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 800px;
     position: relative;
     z-index: 2;
     text-align: center;
@@ -60,20 +60,20 @@
     animation: glow 30s infinite;
 } */
 
-@keyframes glow {
+/* @keyframes glow {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
+} */
 
 h1 {
-    font-size: 3.8rem;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    margin-bottom: 30px;
 }
 
 p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 

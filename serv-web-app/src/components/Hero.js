@@ -19,7 +19,7 @@ const Hero = () => {
         value: 100, // Number of particles
       },
       size: {
-        value: 10, // Particle size
+        value: 3, // Particle size
       },
       color: {
         value: '#4CAF50', // Green particles for theme consistency
@@ -69,7 +69,7 @@ const Hero = () => {
                 </motion.p>
 
                 <button className='fancybutton'>
-                  <a href="#"><span>Get Started</span></a> 
+                  <a href="#cta-section"><span>Get Started</span></a> 
                 </button>
             </div>
         </motion.section>

@@ -5,27 +5,29 @@ const ReviewForm = ({ onAddReview }) => {
     const [name, setName] = useState('');
     const [review, setReview] = useState('');
     const [image, setImage] = useState('');
+    const [rating, setRating] = useState(0); 
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (!name || !review) {
-            alert("Please fill in all fields.");
+        if (!name || !review || rating === 0) {
+            alert("Please fill in all fields and provide a rating.");
             return;
         }
 
         const newReview = {
             name,
             review,
-            image: image || "/assets/default-avatar.png" // Default image for new reviews
+            image: image || "/assets/serv.png",
+            rating 
         };
 
         onAddReview(newReview);
 
-        // Clear the form fields
         setName('');
         setReview('');
         setImage('');
+        setRating(0); // Reset rating
     };
 
     return (
@@ -48,6 +50,20 @@ const ReviewForm = ({ onAddReview }) => {
                 value={image}
                 onChange={(e) => setImage(e.target.value)}
             />
+
+            {/* Star Rating Input */}
+            <div className="rating-input">
+                {[1, 2, 3, 4, 5].map((star) => (
+                    <span 
+                        key={star} 
+                        className={`star ${rating >= star ? 'filled' : ''}`} 
+                        onClick={() => setRating(star)}
+                    >
+                        ★
+                    </span>
+                ))}
+            </div>
+
             <button type="submit" className="submit-btn">Submit Review</button>
         </form>
     );
