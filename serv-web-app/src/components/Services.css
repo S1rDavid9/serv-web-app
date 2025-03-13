@@ -1,8 +1,11 @@
 .services-section {
     text-align: center;
     padding: 2rem;
-    background-color: #45a049
+    background-color: #45a049;
+    position: relative;
+    z-index: 2;
 }
+
 
 .services-section h2 {
     font-size: 2.5rem;
