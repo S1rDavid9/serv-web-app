@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaHome, FaTools, FaBars, FaTimes, FaInfoCircle } from 'react-icons/fa';
 import './Navbar.css';
 
@@ -17,9 +18,9 @@ const Navbar = () => {
 
       <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
         <li>
-          <a href="#home">
+          <Link to="/">
             <FaHome className="icon" /> Home
-          </a>
+          </Link>
         </li>
         <li>
           <a href="#about">
@@ -27,9 +28,9 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#services">
+          <Link to="/services">
             <FaTools className="icon" /> Services
-          </a>
+          </Link>
         </li>
       </ul>
 

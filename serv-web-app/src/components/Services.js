@@ -31,7 +31,7 @@ const services = [
               <div className="service-icon">{service.icon}</div>
               <h3>{service.name}</h3>
               <p>{service.description}</p>
-              <button className="book-btn">Book Now</button>
+              <button className="book-btn"><a href='/services'>Book Now</a></button>
             </div>
           ))}
         </Carousel>
