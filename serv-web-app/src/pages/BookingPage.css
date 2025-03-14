@@ -13,7 +13,7 @@
     position: relative; /* Ensures content layers properly */
 }
 
-h1 {
+.booking-page h1 {
     color: #fff;
     background: rgba(0, 0, 0, 0.8); /* Dark overlay for readability */
     padding: 15px 40px;
@@ -56,7 +56,7 @@ input:focus, select:focus, textarea:focus {
     border-color: gold;
 }
 
-.book-btn {
+.booking-page .book-btn {
     background: #4facfe;
     color: #fff;
     border: none;
@@ -70,7 +70,7 @@ input:focus, select:focus, textarea:focus {
     transition: background 0.3s ease-in-out;
 }
 
-.book-btn:hover {
+.booking-page .book-btn:hover {
     background: #00f2fe;
 }
 
