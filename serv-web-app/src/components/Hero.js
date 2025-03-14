@@ -16,7 +16,7 @@ const Hero = () => {
     },
     particles: {
       number: {
-        value: 100, // Number of particles
+        value: 200, // Number of particles
       },
       size: {
         value: 3, // Particle size
