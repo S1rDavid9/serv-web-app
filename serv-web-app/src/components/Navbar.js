@@ -8,6 +8,8 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <nav className="navbar">
       <div className="logo">Serv</div>
@@ -18,24 +20,24 @@ const Navbar = () => {
 
       <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
         <li>
-          <Link to="/">
+          <Link to="/" onClick={closeMenu}>
             <FaHome className="icon" /> Home
           </Link>
         </li>
         <li>
-          <a href="#about">
+          <a href="#about" onClick={closeMenu}>
             <FaInfoCircle className="icon" /> About
           </a>
         </li>
         <li>
-          <Link to="/services">
+          <Link to="/services" onClick={closeMenu}>
             <FaTools className="icon" /> Services
           </Link>
         </li>
       </ul>
 
       <button className='cta-button'>
-        <a href="#cta-section"><span>Get Started</span></a> 
+        <a href="#cta-section" onClick={closeMenu}><span>Get Started</span></a> 
       </button>
     </nav>
   );

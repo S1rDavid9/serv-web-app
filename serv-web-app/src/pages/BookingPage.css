@@ -57,7 +57,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .booking-page .book-btn {
-    background: #4facfe;
+    background: #4caf50;
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -71,20 +71,32 @@ input:focus, select:focus, textarea:focus {
 }
 
 .booking-page .book-btn:hover {
-    background: #00f2fe;
+    background: black;
+    color: #fff;
 }
 
 .confirmation-message {
-    background: #4caf50;
+    background: linear-gradient(135deg, #4caf50, #2e7d32); /* Enhanced green gradient */
     color: #fff;
-    padding: 10px 15px;
-    border-radius: 8px;
+    font-size: 1.2rem; /* Increased text size for better visibility */
+    padding: 15px 20px;
+    border-radius: 12px;
     text-align: center;
     margin-top: 20px;
-    animation: fadeIn 0.5s ease-in-out;
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.3),  /* Outer shadow */
+        0 6px 20px rgba(0, 0, 0, 0.4); /* Deeper 3D shadow */
+    border: 2px solid #1b5e20; /* Defined border for crisp edges */
+    transform: scale(1); /* Default scale */
+    animation: fadeIn 0.5s ease-in-out, popEffect 0.3s ease-out 0.5s forwards;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popEffect {
+    from { transform: scale(0.9); }  /* Slightly smaller */
+    to { transform: scale(1.05); }   /* Pops out briefly */
 }

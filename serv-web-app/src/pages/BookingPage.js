@@ -42,7 +42,7 @@ const BookingPage = () => {
             // Redirect back to the landing page after 5 seconds
             setTimeout(() => {
                 navigate('/');
-            }, 5000);
+            }, 15000);
         } else {
             alert('Please fill in all required fields.');
         }
