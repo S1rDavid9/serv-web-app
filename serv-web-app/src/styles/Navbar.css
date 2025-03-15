@@ -30,11 +30,44 @@
   }
   
   .nav-links li a:hover {
-    color: #ffd700; /* Vibrant gold */
+    color: #ffd700; 
   }
+
+  .menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #4CAF50;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .cta-button {
+        display: none; /* Hide CTA on mobile if desired */
+    }
+}
   
-  .cta-button {
-    background-color: #ffd700; /* Gold for contrast */
+  /* .cta-button {
+    background-color: #ffd700; 
     border: none;
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
@@ -43,5 +76,5 @@
   }
   
   .cta-button:hover {
-    background-color: #ffcc00; /* Slightly deeper gold */
-  }  
+    background-color: #ffcc00;
+  }  */

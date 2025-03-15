@@ -76,9 +76,9 @@ input:focus, select:focus, textarea:focus {
 }
 
 .confirmation-message {
-    background: linear-gradient(135deg, #4caf50, #2e7d32); /* Enhanced green gradient */
+    background: linear-gradient(135deg, #4caf50, #2e7d32, #333); 
     color: #fff;
-    font-size: 1.2rem; /* Increased text size for better visibility */
+    font-size: 1.2rem; 
     padding: 15px 20px;
     border-radius: 12px;
     text-align: center;
@@ -97,6 +97,6 @@ input:focus, select:focus, textarea:focus {
 }
 
 @keyframes popEffect {
-    from { transform: scale(0.9); }  /* Slightly smaller */
-    to { transform: scale(1.05); }   /* Pops out briefly */
+    from { transform: scale(0.9); }  
+    to { transform: scale(1.05); }   
 }
