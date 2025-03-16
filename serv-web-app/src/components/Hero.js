@@ -57,7 +57,7 @@ const Hero = () => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.5, duration: 1 }}
                 >
-                    Connecting Services to Solutions
+                    Connecting Artisans to Users
                 </motion.h1>
 
                 <motion.p
