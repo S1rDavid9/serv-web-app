@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
@@ -39,6 +40,27 @@ const Hero = () => {
   };
 
    return (
+      <>
+        {/* Background Image Section */}
+        <div className="background-image">
+        <div className="typewriter-text">
+                    <Typewriter
+                        words={[
+                            'Welcome to Serv',
+                            'Connecting You to Trusted Artisans',
+                            'Your One-Stop Service Platform'
+                        ]}
+                        loop={0} // 0 = infinite loop
+                        cursor
+                        cursorStyle="_"
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        delaySpeed={2000}
+                    />
+                </div>
+        </div>
+
+        {/* Hero Section with Particles*/}
         <motion.section 
             className="hero-section"
             initial={{ opacity: 0 }}
@@ -73,6 +95,7 @@ const Hero = () => {
                 </button>
             </div>
         </motion.section>
+    </>
     );
 };
 
