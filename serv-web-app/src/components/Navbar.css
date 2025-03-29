@@ -91,7 +91,7 @@
       display: block;
   }
 
-  .cta-button {
-      display: none; /* Hide CTA on mobile if desired */
-  }
+  /* .cta-button {
+      display: none; 
+  } */
 }

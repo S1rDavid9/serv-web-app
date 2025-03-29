@@ -10,6 +10,9 @@ import About from './components/About';
 import Testimonials from './components/Testimonials';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
+import AdminDashboard from './pages/AdminDashboard';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
@@ -28,6 +31,11 @@ function App() {
           } />
           <Route path="/services" element={<ServicesPage />} /> 
           <Route path="/booking" element={<BookingPage />} /> 
+          <Route path="/admin" element={<AdminDashboard />} />
+
+          {/* Auth Wrapper with Conditional Rendering */}
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
         <Footer />
       </div>

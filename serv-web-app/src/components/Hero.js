@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import './Hero.css';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
 
@@ -43,6 +44,10 @@ const Hero = () => {
       <>
         {/* Background Image Section */}
         <div className="background-image">
+        {/* <div className="auth-links">
+            <Link to="/signin" className="auth-button">Log In</Link>
+            <Link to="/signup" className="auth-button">Sign Up</Link>
+        </div> */}
         <div className="typewriter-text">
                     <Typewriter
                         words={[
