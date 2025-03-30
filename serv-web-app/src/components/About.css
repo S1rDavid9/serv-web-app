@@ -68,7 +68,7 @@
 
 .about-section {
     display: flex;
-    background: linear-gradient(135deg, #4CAF50, #2E8B57);
+    background: linear-gradient(135deg, #333, #2E8B57);
     color: #fff;
     flex-direction: column;
     align-items: center;
@@ -76,7 +76,7 @@
     z-index: 2;
     gap: 2rem;
     padding: 4rem 2rem;
-    background-color: #f0f4f8;
+    /* background-color: #f0f4f8; */
 }
 
 .about-content {

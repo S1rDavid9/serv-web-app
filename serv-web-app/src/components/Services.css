@@ -1,7 +1,7 @@
 .services-section {
     text-align: center;
     padding: 2rem;
-    background-color: #45a049;
+    background: linear-gradient(135deg, black, #333);
     position: relative;
     z-index: 2;
 }
@@ -14,7 +14,7 @@
 }
 
 .service-card {
-    background: linear-gradient(135deg, #4CAF50, #2E8B57);
+    background: linear-gradient(135deg, #333, #2E8B57);
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 2rem;

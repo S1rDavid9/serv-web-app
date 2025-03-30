@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Sign.css"; 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -18,16 +20,21 @@ const SignIn = () => {
 
     const storedUser = JSON.parse(localStorage.getItem("user"));
 
-    if (!storedUser || storedUser.email !== formData.email || storedUser.password !== formData.password) {
-      alert("Invalid email or password!");
+    if (!storedUser || storedUser.email !== formData.email) {
+      toast.error("User not found! Please sign up.");
       return;
     }
 
-    alert("Sign in successful!");
-    navigate("/admin"); // Redirect to the dashboard
+    if (storedUser.password !== formData.password) {
+      toast.error("Incorrect password!");
+      return;
+    }
+
+    toast.success(`Welcome back, ${storedUser.fullName}!`, {
+      onClose: () => navigate("/admin"), // Redirect to Admin Dashboard
+    });
   };
-
-
+  
   return (
     <div className="signin-container">
       <div className="signin-box">

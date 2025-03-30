@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Sign.css"; 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -19,7 +21,7 @@ const SignUp = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
+      toast.error("Passwords do not match!");
       return;
   }
 
@@ -31,8 +33,10 @@ const SignUp = () => {
   };
   localStorage.setItem("user", JSON.stringify(userData));
 
-  alert("Sign up successful! Please sign in.");
-  navigate("/signin"); // Redirect to Sign In page
+  toast.success("Account created successfully! Please sign in." , {
+    onClose: () => navigate("/signin"), // Redirect to Sign In page
+  });
+    
 };
 
   return (
