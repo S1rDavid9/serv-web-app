@@ -34,7 +34,7 @@
 
 .background-image {
   background:
-  linear-gradient(rgba(0, 0, 0.5, 0.8), rgba(0, 0, 0, 0.9)),
+  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
   url('C:\Users\Akachi\school\serv-web-app\serv-web-app\public\assets\artisanlady.jpg') no-repeat center center/cover; 
   /* background-attachment: fixed; */
   width: 100%;

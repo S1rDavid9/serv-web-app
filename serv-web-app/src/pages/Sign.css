@@ -1,0 +1,172 @@
+/* .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+  }
+  
+  .signup-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .signup-form h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .signup-form input,
+  .signup-form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .signup-form input:focus,
+  .signup-form select:focus {
+    outline: none;
+    border-color: #3b82f6;
+  }
+  
+  .signup-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    cursor: pointer;
+  }
+  
+  .signup-form button:hover {
+    background-color: #2563eb;
+  }
+  
+  .signup-form a {
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  
+  .signup-form a:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 480px) {
+    .signup-form {
+      padding: 1.5rem;
+    }
+  
+    .signup-form h2 {
+      font-size: 1.25rem;
+    }
+  
+    .signup-form input,
+    .signup-form select {
+      font-size: 0.875rem;
+    }
+  
+    .signup-form button {
+      font-size: 1rem;
+    }
+  }   */
+
+  /* General form container styling */
+.signup-container,
+.signin-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f3f4f6; /* Tailwind gray-100 */
+}
+
+/* Form box */
+.signup-box,
+.signin-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 24rem; /* Tailwind w-96 */
+}
+
+/* Form heading */
+.signup-title,
+.signin-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Input fields */
+.signup-input,
+.signin-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db; /* Tailwind gray-300 */
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.signup-input:focus,
+.signin-input:focus {
+  outline: none;
+  border-color: #3b82f6; /* Tailwind blue-500 */
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+/* Button */
+.signup-button,
+.signin-button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.signup-button:hover,
+.signin-button:hover {
+  background-color: black; 
+}
+
+/* Text links */
+.signup-text,
+.signin-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.signup-link,
+.signin-link {
+  color: #4CAF50; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link:hover,
+.signin-link:hover {
+  text-decoration: underline;
+}
