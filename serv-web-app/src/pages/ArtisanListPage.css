@@ -1,0 +1,45 @@
+.artisan-list-page {
+    padding: 2rem;
+    text-align: center;
+}
+
+.back-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.artisan-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.artisan-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f8f8f8;
+    margin: 8px 0;
+}
+
+.artisan-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.artisan-name {
+    flex: 1;
+    font-weight: 600;
+}
+
+.artisan-rating {
+    color: #ff9800;
+    font-weight: bold;
+}

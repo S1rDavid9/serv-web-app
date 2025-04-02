@@ -12,6 +12,7 @@
 }
 
 .services-page .service-card {
+    position: relative;
     background: #ffffff;
     border: 2px solid #4CAF50;
     border-radius: 15px;
@@ -54,4 +55,77 @@
 
 .book-now-btn:hover {
     background: #4CAF50
+}
+
+/* Style for the pop-out list container */
+.service-list-container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    padding: 1rem;
+}
+
+/* Style to ensure proper spacing */
+.services-page .service-card {
+    position: relative; /* Make sure the card is the reference point for absolute positioning */
+}
+
+/* Pop-out list styles */
+.artisan-list-popout {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    text-align: left;
+}
+
+/* Artisan list header */
+.artisan-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Close button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: red;
+}
+
+/* Artisan card styles */
+.artisan-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.artisan-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.artisan-name {
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.artisan-rating {
+    color: #f39c12;
 }

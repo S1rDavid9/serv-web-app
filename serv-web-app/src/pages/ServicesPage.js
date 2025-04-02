@@ -1,7 +1,10 @@
 import React from 'react';
-import { FaTools, FaPaintRoller, FaBolt, FaHammer, FaLeaf, FaTruck, FaShieldAlt, FaWrench, FaFan, FaCar } from 'react-icons/fa';
-import './ServicesPage.css';
+import { 
+    FaTools, FaPaintRoller, FaBolt, FaHammer, FaLeaf, 
+    FaTruck, FaShieldAlt, FaWrench, FaFan, FaCar 
+} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import './ServicesPage.css';
 
 const services = [
     { id: 1, name: 'Plumbing', icon: <FaWrench />, description: 'Professional plumbing services for homes and offices.' },
@@ -19,9 +22,6 @@ const services = [
 const ServicesPage = () => {
     const navigate = useNavigate();
 
-    const handleBooking = (serviceName) => {
-        navigate(`/booking?service=${encodeURIComponent(serviceName)}`);
-    };
     return (
         <div className="services-page">
             <h1>Our Services</h1>
@@ -33,7 +33,7 @@ const ServicesPage = () => {
                         <p>{service.description}</p>
                         <button 
                             className="book-now-btn" 
-                            onClick={() => handleBooking(service.name)}
+                            onClick={() => navigate(`/artisans/${service.name}`)}
                         >
                             Book Now
                         </button>

@@ -95,3 +95,31 @@
       display: none; 
   } */
 }
+
+.cta-section {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.navbar .logout-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar .logout-button:hover {
+  background-color: #c0392b;
+}

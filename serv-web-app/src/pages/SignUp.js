@@ -23,21 +23,21 @@ const SignUp = () => {
     if (formData.password !== formData.confirmPassword) {
       toast.error("Passwords do not match!");
       return;
-  }
+    }
 
-  const userData = {
-    fullName: formData.fullName,
-    gender: formData.gender,
-    email: formData.email,
-    password: formData.password,
+    const userData = {
+      fullName: formData.fullName,
+      gender: formData.gender,
+      email: formData.email,
+      password: formData.password,
+    };
+
+    localStorage.setItem("user", JSON.stringify(userData)); // Store user in localStorage
+
+    toast.success(`Hello ${formData.fullName}, please sign in!`, {
+      onClose: () => navigate("/signin"), // Redirect to homepage
+    });
   };
-  localStorage.setItem("user", JSON.stringify(userData));
-
-  toast.success("Account created successfully! Please sign in." , {
-    onClose: () => navigate("/signin"), // Redirect to Sign In page
-  });
-    
-};
 
   return (
     <div className="signup-container">

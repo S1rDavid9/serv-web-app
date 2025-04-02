@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./Sign.css"; 
+import "./Sign.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -30,11 +30,18 @@ const SignIn = () => {
       return;
     }
 
+    // Store logged-in user
+    localStorage.setItem("user", JSON.stringify(storedUser));
+
+    // Trigger navbar update (to change the "Get Started" button to user's name)
+    window.dispatchEvent(new Event("storage"));
+
+    // Show success toast and navigate to homepage
     toast.success(`Welcome back, ${storedUser.fullName}!`, {
-      onClose: () => navigate("/admin"), // Redirect to Admin Dashboard
+      onClose: () => navigate("/"), // Redirect to homepage
     });
   };
-  
+
   return (
     <div className="signin-container">
       <div className="signin-box">

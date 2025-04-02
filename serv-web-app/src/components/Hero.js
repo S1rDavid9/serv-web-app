@@ -96,7 +96,7 @@ const Hero = () => {
                 </motion.p>
 
                 <button className='fancybutton'>
-                  <a href="#cta-section"><span>Get Started</span></a> 
+                  <a href="/signup"><span>Get Started</span></a> 
                 </button>
             </div>
         </motion.section>

@@ -22,7 +22,7 @@ const CTASection = () => {
             </motion.p>
 
             <button className='fancybutton'>
-                  <a href="#"><span>Get Started Now</span></a> 
+                  <a href="/signup"><span>Get Started Now</span></a> 
                 </button>
         </section>
     );

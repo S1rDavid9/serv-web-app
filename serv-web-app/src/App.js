@@ -15,6 +15,9 @@ import AdminDashboard from './pages/AdminDashboard';
 import Profile from './pages/Profile';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import ArtisanListPage from './pages/ArtisanListPage';
+import ArtisanProfilePage from './pages/ArtisanProfilePage';
+import NotFound from './pages/NotFound';  // Optional: You can create a 404 Page
 
 function App() {
   return (
@@ -31,19 +34,23 @@ function App() {
               <CTASection />
             </>
           } />
-          <Route path="/services" element={<ServicesPage />} /> 
-          <Route path="/booking" element={<BookingPage />} /> 
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/booking" element={<BookingPage />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="*" element={<SignIn />} /> {/* Redirect unknown routes to Sign In */}
-
+          <Route path="/artisans/:serviceName" element={<ArtisanListPage />} />
+          <Route path="/artisan/:id" element={<ArtisanProfilePage />} /> {/* Added artisan profile route */}
+          
           {/* Auth Wrapper with Conditional Rendering */}
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          
+          {/* Redirect unknown routes to NotFound */}
+          <Route path="*" element={<NotFound />} /> {/* Added 404 route */}
         </Routes>
         <Footer />
-         {/* Toast Container */}
-         <ToastContainer position="bottom-left" autoClose={3000} hideProgressBar={false} />
+        {/* Toast Container */}
+        <ToastContainer position="bottom-left" autoClose={3000} hideProgressBar={false} />
       </div>
     </Router>
   );
