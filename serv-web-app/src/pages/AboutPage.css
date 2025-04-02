@@ -3,13 +3,13 @@
     --primary-green: #3b8a5e;
     --light-green: #e8f3ee;
     --medium-green: #a4cfb7;
-    --dark-green: #2a6644;
-    --text-dark: #333333;
-    --text-medium: #555555;
-    --text-light: #ffffff;
+    --dark-green: #50ab77;
+    --text-dark: #111010;
+    --text-medium: #393636;
+    --text-light: #fbf4f4;
     --background: #fafafa;
   }
-  
+
   .about-container {
     width: 100%;
     margin: 0 auto;
@@ -100,12 +100,16 @@
     border-radius: 2px;
   }
   
-  .about-section p, .mission-section p, .artisan-section p, .join-section p {
+  .mission-section p, .artisan-section p, .join-section p {
     font-size: 1.1rem;
     line-height: 1.6;
     color: var(--text-medium);
   }
   
+.about-section p {
+    color: var(--text-light);
+}
+
   .mission-section {
     background-color: var(--light-green);
     display: flex;
@@ -190,7 +194,7 @@
     color: var(--text-dark);
   }
   
-  .cta-button {
+  .about-container .cta-button {
     background-color: var(--primary-green);
     color: var(--text-light);
     border: none;
