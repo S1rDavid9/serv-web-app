@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaTools, FaBars, FaTimes, FaInfoCircle } from 'react-icons/fa';
+import { FaHome, FaTools, FaBars, FaUser, FaTimes, FaInfoCircle } from 'react-icons/fa';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <a href="#about" onClick={closeMenu}>
+          <a href="/aboutp" onClick={closeMenu}>
             <FaInfoCircle className="icon" /> About
           </a>
         </li>
@@ -34,10 +34,17 @@ const Navbar = () => {
             <FaTools className="icon" /> Services
           </Link>
         </li>
+        <li>
+          <Link to="/admin" onClick={closeMenu}>
+            <FaUser className="icon" /> Admin
+          </Link>
+        </li>
       </ul>
 
       <button className='cta-button'>
-        <a href="#cta-section" onClick={closeMenu}><span>Get Started</span></a> 
+        <Link to="/signup">
+        <a href="/signup" onClick={closeMenu}><span>Get Started</span></a> 
+        </Link>
       </button>
     </nav>
   );

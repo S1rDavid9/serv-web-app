@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import './Hero.css';
+// import { Link } from 'react-router-dom';
 
 const Hero = () => {
 
@@ -20,20 +21,20 @@ const Hero = () => {
         value: 200, // Number of particles
       },
       size: {
-        value: 3, // Particle size
+        value: 5, // Particle size
       },
       color: {
         value: '#4CAF50', // Green particles for theme consistency
       },
       move: {
-        enable: true,
+        enable: false,
         speed: 2, // Smooth particle movement
         direction: 'none',
-        random: true,
+        random: false,
       },
       links: {
-        enable: false,
-        color: '#ffd700', // Gold connecting lines for extra vibrancy
+        enable: true,
+        color: '#4CAF50', // Green connecting lines for extra vibrancy
         distance: 150,
       }
     }
@@ -43,6 +44,10 @@ const Hero = () => {
       <>
         {/* Background Image Section */}
         <div className="background-image">
+        {/* <div className="auth-links">
+            <Link to="/signin" className="auth-button">Log In</Link>
+            <Link to="/signup" className="auth-button">Sign Up</Link>
+        </div> */}
         <div className="typewriter-text">
                     <Typewriter
                         words={[
