@@ -8,6 +8,7 @@ import Services from './components/Services';
 import ServicesPage from './pages/ServicesPage'; 
 import BookingPage from './pages/BookingPage';
 import About from './components/About';
+import AboutPage from './pages/AboutPage';
 import Testimonials from './components/Testimonials';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
@@ -34,8 +35,9 @@ function App() {
               <CTASection />
             </>
           } />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/booking" element={<BookingPage />} />
+          <Route path="/services" element={<ServicesPage />} /> 
+          <Route path="/booking" element={<BookingPage />} /> 
+          <Route path="/aboutp" element={<AboutPage />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/artisans/:serviceName" element={<ArtisanListPage />} />
