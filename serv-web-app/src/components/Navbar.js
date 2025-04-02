@@ -25,7 +25,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <a href="#about" onClick={closeMenu}>
+          <a href="/aboutp" onClick={closeMenu}>
             <FaInfoCircle className="icon" /> About
           </a>
         </li>

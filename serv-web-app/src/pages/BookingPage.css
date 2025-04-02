@@ -1,8 +1,8 @@
 .booking-page {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('C:\Users\Akachi\school\serv-web-app\serv-web-app\public\assets\aboutserv2.jpg') no-repeat center center/cover,
-        url('C:\Users\Akachi\school\serv-web-app\serv-web-app\public\assets\aboutserv1.jpg') no-repeat center center/cover;
+        url('C:\Users\krzjo\OneDrive\Desktop\serv-web-app\serv-web-app\public\assets\aboutserv2.jpg') no-repeat center center/cover,
+        url('C:\Users\krzjo\OneDrive\Desktop\serv-web-app\serv-web-app\public\assets\aboutserv1.jpg') no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
